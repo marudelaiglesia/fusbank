@@ -405,7 +405,7 @@ footer {
 
 /*------------------- Media Query Mobile -------------------*/
 
-@media only screen and (min-width: 375px) and (max-width: 767px) {
+@media only screen and (min-width: 360px) and (max-width: 767px) {
 
 	#Contenedor {
 		height: 1100px;
@@ -536,6 +536,7 @@ footer {
 			.columna {
 		
 				.columna__lista {
+					width: 280px;
 					margin-bottom: 10%;
 			
 					.columna__item--usuarios{
@@ -689,7 +690,7 @@ footer {
 
 /*------------------- Media Query Mobile - HTML Error404 -------------------*/
 
-@media only screen and (min-width: 375px) and (max-width: 767px) {
+@media only screen and (min-width: 360px) and (max-width: 767px) {
 
 	.cabecera {
         height: 180px !important;
