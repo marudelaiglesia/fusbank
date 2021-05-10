@@ -14,6 +14,12 @@ Proyecto realizado para el curso de Desarrollo Web de Coderhouse en 2021. Se tra
 # Licencia
 Este proyecto se encuentra bajo licencia del desarrollador.
 
+# Agradecimientos
+- Al mate por acompañarme en las horas de codeo.
+- A las dos profesoras y a mi tutor Fede por el apoyo en cada clase.
 
+.
+.
+.
 
 ⌨️ y :art: con :hearts: por Marilina de la Iglesia
