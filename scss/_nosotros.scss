@@ -1,0 +1,1279 @@
+/*---Variables---*/
+$font: 'Poppins', sans-serif;
+$fontw-900: 900;
+$fontw-800: 800;
+$fontw-700: 700;
+$fontw-600: 600;
+$fontw-500: 500;
+$fontw-400: 400;
+$colorvl: #672C82;
+$colorcl: #0084FF;
+$colornj: #FF8400;
+$colorbc: #FFFFFF;
+$colorgr: #343348;
+$colorft: #6c757d;
+$lettersp1: 1px;
+$lettersp2: $lettersp1 + 1px;
+$bordesred: 10px;
+$bordevl: 1.5px solid $colorvl;
+
+
+/*---ID:Nosotros/Quienes Somos---*/
+#Nosotros {
+	height: auto;
+	padding-bottom: 100px;
+	position: relative;
+
+    img {
+        width: 100%;
+    }
+}
+
+.nosotros {
+
+    .nosotros__titulo {
+	    font-size: 2.5rem;
+	    font-weight: $fontw-800;
+	    position: relative;;
+	    bottom: 360px;
+	    text-align: center;
+        color: $colorvl;
+        padding-bottom: 3%;
+
+        &:hover{
+            font-size: 2.5rem;
+            font-weight: $fontw-800;
+            position: relative;
+            bottom: 360px;
+            text-align: center;
+            color: $colornj;
+            animation-duration: 2s;
+            animation-name: aparecer;
+        }
+    
+        @keyframes aparecer {
+            0% {
+                opacity: 0;
+                }
+            100% {
+                opacity: 1;
+                }
+        }
+    }
+
+    .nosotros__parrafo {
+	    font-size: 1.0625rem;
+	    color: $colorgr;
+	    position: relative;
+	    bottom: 380px;
+	    text-align: center;
+    }
+}
+
+.cardsContenedor {
+	margin: 10px auto;
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+	bottom: 140px;
+	left: 250px;
+
+    .card {
+        background: $colorbc;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: $bordesred;
+        padding: 40px;
+        margin: 25px;
+        height: 120px;
+        width: 300px;
+
+        .card__rectangulo {
+            width: 300px;
+            height: 75px;
+            border-radius: $bordesred;
+            background-color: $colorcl;
+
+            &:hover{
+                width: 300px;
+                height: 75px !important;
+                border-radius: $bordesred;
+                background-image: linear-gradient(160deg, $colorcl 0%, $colornj 100%);
+            }
+
+            .card__titulo {
+                font-size: 1rem;
+                font-weight: $fontw-700;
+                padding-top: 25px;
+                text-align: center;
+                letter-spacing: $lettersp1;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $colorbc;
+            }
+        }
+
+        .card__parrafo {
+            font-size: 0.8125rem;
+            font-weight: $fontw-500;
+            padding-top: 20px;
+            text-align: center;
+            color: $colorcl;
+        }
+    }
+}
+
+*, ::after, ::before {
+    box-sizing: content-box;
+}
+
+/*---HTML: Equipo---*/
+
+.navbar-light {
+
+    .navbar-nav {
+
+        .nav-link.active {
+            color: $colorcl;
+        } 
+    }
+}
+
+#nuestroEquipo {
+    padding-bottom: 5%;
+    background-color: $colorcl;
+}
+
+.container {
+    margin-left: 15%;
+    width: 100% !important;
+}
+
+.equipo {
+
+    .equipo__contenedor {
+        display: flex;
+        flex-wrap: nowrap;
+
+        .equipo__contenedor--izquierda {
+        
+            .equipo__titulo {
+                font-weight: $fontw-700;
+                font-size: 2.25rem;
+                color: $colorbc;
+                padding-bottom: 4%;
+                padding-top: 21%;
+                line-height: 1.3;
+            }
+
+            .equipo__lista {
+                line-height: 3.5;
+                padding-left: 2%;
+
+                .equipo__item {
+                    list-style: none;
+    
+                    .equipo__icono {
+                        display: inline;
+                        margin-left: 5%;
+                        width: 38px;
+                    }
+        
+                    .equipo__parrafo {
+                        display: inline;
+                        font-size: 1.05rem;
+                        font-weight: $fontw-400;
+                        margin-left: 5%;
+                        color: $colorbc;
+                    }
+                }
+            }
+        }
+
+        .equipo__contenedor--derecha {
+
+            .equipo__img{
+                height: 600px;
+                padding-top: 5%;
+                padding-left: 5%;
+            }
+        }
+    }  
+}
+
+#Conocenos {
+    margin-top: 0%;
+
+    .tituloFondo {
+        font-size: 3.125rem;
+        font-weight: $fontw-800;
+        letter-spacing: $lettersp2;
+        display: flex;
+        justify-content: center;
+        background-color: $colorvl;
+        color: $colorbc;
+        padding-top: 3%;
+		padding-bottom: 3%;
+    }
+}
+
+#Ir {
+    padding-top: 2%;
+    padding-bottom: 3%;
+
+    .preguntas {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        margin-top: 20%;
+        margin-bottom: 10%;
+    
+        .preguntas__titulo {
+            font-size: 1.875rem;
+            font-weight: $fontw-700;
+            color: $colorgr;
+            padding-bottom: 25px;
+            text-align: center;
+        }
+    
+        .preguntas__parrafo {
+            font-size: 1.125rem;
+            color: $colorgr;
+            text-align: center;
+        }
+    
+        .mensaje__cta {
+            padding-top: 2%;
+            text-align: center;
+        
+            .btn-primary {
+                font-weight: $fontw-500;
+                font-size: 1.0625rem;
+                padding-left: 3%;
+                padding-right: 3%;
+                background-color: $colorcl;
+                border-color: $colorcl;
+    
+                &:hover {
+                    background-color: $colornj;
+                    border-color: $colornj;
+    
+                    a {
+                        color: $colorbc !important;
+                        text-decoration: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Propositos {
+    margin-top: 6%;
+
+    .nosotros__encabezado {
+        font-weight: $fontw-600;
+        font-size: 1.9rem;
+        color: $colorvl;
+        text-align: center;
+    }
+
+    .proposito__contenedor {
+        margin: 5% 4% 3% 4%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .proposito__tarjeta {
+            width: 20%;
+            text-align: center;
+            margin: 0% 2.5% 0% 2.5%;
+
+            .proposito__imagen {
+                width: 50%;
+                padding-bottom: 15%;
+            }
+
+            .proposito__titulo {
+                font-weight: $fontw-600;
+                font-size: 1.1rem;
+                color: $colorgr;
+                padding-bottom: 5%;
+            }
+
+            .proposito__parrafo {
+                font-size: 0.825rem;
+                line-height: 1.7;
+                padding-bottom: 7%;
+                color: $colorgr;
+            }
+
+            button {
+                border: none;
+
+                .btn-outline-primary {
+                    font-weight: $fontw-500;
+                    font-size: 0.9375rem;
+                    background-color: $colorbc;
+                    border-color: $colornj;
+                    color: $colornj;
+
+                    &:hover {
+                        background-color: $colornj;
+                        color: $colorbc;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Ir {
+    padding-bottom: 1%;
+}
+
+#Flecha {
+    background-color: $colorbc;
+    border-radius: 5px;
+    position: fixed;
+    top: 830px;
+    right: 50px;
+    z-index: 3;
+    animation-duration: 2.5s;
+    animation-name: bounceInDown;
+
+    @keyframes bounceInDown {
+        0% {
+           opacity: 0;
+           transform: translateY(-2000px);
+        }
+        60% {
+           opacity: 1;
+           transform: translateY(30px);
+        }
+        80% {
+           transform: translateY(-10px);
+        }
+        100% {
+           transform: translateY(0);
+        }
+    }
+
+    &:hover {
+        background-color: $colorvl;
+    }
+
+    a {
+        color: $colorvl;
+
+        &:hover {
+            color: $colorbc;
+        }
+    }
+}
+
+/*---HTML: Misión---*/
+
+.Pilares {
+    margin-top: 2%;
+
+    .nosotros__encabezado {
+        font-size: 1.9rem;
+        font-weight: $fontw-600;
+        text-align: center;
+        padding: 3% 0% 3% 0%;
+        color: $colorvl;
+    }
+
+    .tresContenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    
+        .tres {
+            background: $colorvl;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: $bordesred;
+            margin: 25px;
+            width: 20%;
+            height: 450px;
+    
+            .tres__cuadrado {
+                height: 43%;
+                width: 100%;
+                border-radius: 10px 10px 0px 0px;
+                background-color: $colorbc;
+    
+                .tres__character--uno {
+                    width: 157px;
+                    display: block;
+                    margin: auto;
+                    padding-top: 5%;
+                }
+    
+                .tres__character--dos {
+                    width: 92px;
+                    display: block;
+                    margin: auto;
+                    padding-top: 5%;
+                }
+    
+                .tres__character--tres {
+                    width: 108px;
+                    display: block;
+                    margin: auto;
+                    padding-top: 5%;
+                }
+    
+                .tres__titulo {
+                    font-size: 1.2rem;
+                    font-weight: $fontw-700;
+                    padding-top: 12%;
+                    padding-bottom: 10%;
+                    text-align: center;
+                    letter-spacing: $lettersp1;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    color: $colorbc;
+                }
+            }
+    
+            .tres__parrafo {
+                font-size: 0.8125rem;
+                font-weight: 200;
+                padding: 35% 10% 10% 10%;
+                text-align: center;
+                color: $colorbc;
+            }
+        }
+    }
+    
+    *, ::after, ::before {
+        box-sizing: content-box;
+    }
+}
+
+#Filosofia {
+    margin-top: 9%;
+
+    .tituloFondo {
+        font-size: 3.125rem;
+        font-weight: $fontw-800;
+        letter-spacing: $lettersp2;
+        display: flex;
+        justify-content: center;
+        background-color: $colorvl;
+        color: $colorbc;
+        padding-top: 3%;
+		padding-bottom: 3%;
+    }
+
+    .filosofia__contenedor {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 7% 20% 7% 20%;
+
+        .filosofia__burbuja {
+
+            .filosofia__borde {
+                width: 92px;
+                height: 92px;
+                background-color: $colorbc;
+                border-radius: 33px;
+                box-shadow: 0 0 15px rgba(0,0,0,0.2);
+                display: flex;
+                justify-content: center;
+                margin-bottom: 25%;
+
+                &:hover{
+                    animation-duration: 1.5s;
+                    animation-name: bounceIn;
+
+                    @keyframes bounceIn {
+                        0% {
+                        opacity: 0;
+                        transform: translateY(-0px);
+                        }
+                        60% {
+                        opacity: 1;
+                        transform: translateY(20px);
+                        }
+                        80% {
+                        transform: translateY(-5px);
+                        }
+                        100% {
+                        transform: translateY(0);
+                        }
+                    }
+                }
+
+                .filosofia__icono {
+                    width: 30px;
+                }
+            }
+
+            .filosofia__parrafo {
+                font-size: 0.85rem;
+                font-weight: $fontw-500;
+                color: $colorgr;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/*---HTML: Visión---*/
+
+#Vamos {
+
+    .tituloFondo {
+        font-size: 3.125rem;
+        font-weight: $fontw-800;
+        letter-spacing: $lettersp2;
+        display: flex;
+        justify-content: center;
+        background-color: $colorvl;
+        color: $colorbc;
+        padding-top: 3%;
+		padding-bottom: 3%;
+    }
+    
+    .vamos__vision {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 3%;
+
+        .border-primary {
+            border: $bordevl !important;
+
+            .card-header {
+                font-size: 0.8rem;
+                border-bottom: $bordevl;
+            }
+
+            .card-body {
+
+                .card-title {
+                    font-size: 1.25rem;
+                    font-weight: $fontw-600;
+                    color: $colorvl !important;
+                    margin-bottom: 5%;
+                }
+
+                .card-text {
+                    font-size: 0.8125rem;
+                    font-weight: 200;
+                    line-height: 1.7;
+                    color: $colorgr;
+                }
+            }
+        }
+
+        .mb-3 {
+            margin: 2% !important;
+        }
+
+        .card_hover:hover {
+            background-color: $colorvl;
+            border: 1.5px solid #FFFFFF !important;
+        
+            .card-header {
+                color: $colorbc;
+                border-bottom: 1.5px solid #FFFFFF;
+            }
+            
+            .card-title {
+                font-weight: $fontw-600;
+                color: $colorbc !important;
+            }
+        
+            .card-text {
+                color: $colorbc !important;
+            }
+        }
+    }
+}
+
+/*------------------- Media Query Mobile - Index -------------------*/
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+
+    #Nosotros {
+        padding-bottom: 80px;
+    
+        img {
+            width: 100%;
+            margin-top: 10%;
+        }
+    }
+    
+    .nosotros {
+    
+        .nosotros__titulo {
+            font-size: 2.1rem;
+            bottom: 10px;
+
+            &:hover{
+                font-size: 2.1rem;
+                bottom: 10px;
+            }
+        }
+    
+        .nosotros__parrafo {
+            font-size: 0.9rem;
+            bottom: 10px;
+            padding: 0% 5% 0% 5%;
+        }
+    }
+    
+    .cardsContenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        left: 0;
+        top: 1px;
+    
+        .card {
+            width: 200px;
+    
+            .card__rectangulo {
+                width: 200px;
+
+                &:hover {
+                    width: 200px;
+                }
+    
+                .card__titulo {
+                    font-size: 1.1rem;
+                    padding-top: 22px;
+                }
+            }
+    
+            .card__parrafo {
+                font-size: 0.875rem;
+                padding-top: 20px;
+            }
+        }
+    }
+    
+    *, ::after, ::before {
+        box-sizing: content-box;
+    }
+    
+    /*---Sección: Equipo---*/
+    #nuestroEquipo {
+        padding-top: 2%;
+        padding-bottom: 5%;
+        background-color: $colorcl;
+    }
+    
+    .container {
+        margin-left: 15%;
+    }
+    
+    .equipo {
+    
+        .equipo__contenedor {
+            flex-wrap: nowrap;
+    
+            .equipo__contenedor--izquierda {
+            
+                .equipo__titulo {
+                    font-weight: $fontw-700;
+                    font-size: 2.25rem;
+                    color: $colorbc;
+                    padding-bottom: 4%;
+                    padding-top: 18%;
+                    margin-left: 3%;
+                    line-height: 1.3;
+                }
+            
+                .equipo__parrafo {
+                    font-size: 1.125rem;
+                    font-weight: $fontw-400;
+                    margin-left: 18%;
+                    padding-top: 2.3%;
+                    padding-bottom: 2%;
+                    color: $colorbc;
+                }
+            
+                .equipo__icono {
+                    margin-left: 10%;
+                    padding-top: 1.5%;
+                    width: 36px;
+                    float: left;
+                }
+            }
+    
+            .equipo__contenedor--derecha {
+    
+                .equipo__img{
+                    height: 600px;
+                    padding-top: 5%;
+                }
+            }
+        }  
+    }
+}
+
+
+/*------------------- Media Query Tablet - Index -------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+
+    #Nosotros {
+        padding-bottom: 80px;
+    
+        img {
+            width: 100%;
+            margin-top: 10%;
+        }
+    }
+    
+    .nosotros {
+    
+        .nosotros__titulo {
+            font-size: 2.3rem;
+            bottom: 80px;
+
+            &:hover{
+                font-size: 2.3rem;
+                bottom: 80px;
+            }
+        }
+    
+        .nosotros__parrafo {
+            font-size: 1rem;
+            bottom: 90px;
+        }
+    }
+    
+    .cardsContenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        left: 0;
+        top: 1px;
+    
+        .card {
+            background: $colorbc;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: $bordesred;
+            padding: 40px;
+            margin: 25px;
+            height: 120px;
+            width: 300px;
+    
+            .card__rectangulo {
+    
+                .card__titulo {
+                    font-size: 1.1rem;
+                    padding-top: 22px;
+                }
+            }
+    
+            .card__parrafo {
+                font-size: 1rem;
+                font-weight: $fontw-500;
+                padding-top: 20px;
+                text-align: center;
+                color: $colorcl;
+            }
+        }
+    }
+    
+    *, ::after, ::before {
+        box-sizing: content-box;
+    }
+    
+    /*---Sección: Equipo---*/
+    #nuestroEquipo {
+        padding-top: 2%;
+        padding-bottom: 5%;
+        background-color: $colorcl;
+    }
+    
+    .container {
+        margin-left: 15%;
+    }
+    
+    .equipo {
+    
+        .equipo__contenedor {
+            flex-wrap: nowrap;
+    
+            .equipo__contenedor--izquierda {
+            
+                .equipo__titulo {
+                    font-weight: $fontw-700;
+                    font-size: 2.25rem;
+                    color: $colorbc;
+                    padding-bottom: 4%;
+                    padding-top: 18%;
+                    margin-left: 3%;
+                    line-height: 1.3;
+                }
+            
+                .equipo__parrafo {
+                    font-size: 1.125rem;
+                    font-weight: $fontw-400;
+                    margin-left: 18%;
+                    padding-top: 2.3%;
+                    padding-bottom: 2%;
+                    color: $colorbc;
+                }
+            
+                .equipo__icono {
+                    margin-left: 10%;
+                    padding-top: 1.5%;
+                    width: 36px;
+                    float: left;
+                }
+            }
+    
+            .equipo__contenedor--derecha {
+    
+                .equipo__img{
+                    height: 600px;
+                    padding-top: 5%;
+                }
+            }
+        }  
+    }
+}
+
+/*------------------- Media Query Mobile - HTML Equipo -------------------*/
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+
+    .cabecera {
+        height: 180px !important;
+    }
+
+    .separadores {
+
+        .breadcrumb {
+            padding-left: 10.5% !important;
+            padding-top: 2%;
+        }
+
+        .breadcrumb-item {
+            font-size: 0.8rem !important;
+        }
+    }
+    
+    #nuestroEquipo {
+    
+        .equipo__contenedor {
+            flex-wrap: wrap;
+    
+            .equipo__contenedor--izquierda {
+                width: 100%;
+            
+                .equipo__titulo {
+                    font-size: 1.3rem;
+                    margin-left: 8.1%;
+                    margin-bottom: 10%;
+                    padding-top: 15%;
+                }
+
+                .equipo__lista {
+                    line-height: 1.5;
+
+                    .equipo__item {
+
+                        .equipo__icono {
+                            margin-left: 10%;
+                        }
+
+                        .equipo__parrafo {
+                            font-size: 0.8125rem;
+                            margin-left: 30%;
+                            display: block;
+                            padding-top: 2%;
+                            padding-bottom: 0%;
+                        }
+                    }
+                }
+            }
+    
+            .equipo__contenedor--derecha {
+                margin-left: 12%;
+
+                .equipo__img {
+                    height: 350px;
+                    padding-top: 14%;
+                    padding-left: 0;
+                }
+            }
+        }  
+    }
+
+    #Conocenos {
+
+        .tituloFondo {
+            font-size: 2.3rem;
+            padding-top: 8%;
+            padding-bottom: 8%;
+        }
+    }
+
+    #Propositos {
+
+        .nosotros__encabezado {
+            font-size: 1.3rem;
+            padding: 6% 5% 3% 5%;
+            line-height: 1.3;
+        }
+
+        .proposito__contenedor {
+            margin: 8% 0% 3% 0%;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            .proposito__tarjeta {
+                width: 80%;
+                margin: 7% 3% 20% 3%;
+
+                .proposito__titulo {
+                    font-size: 1.16rem;
+                    padding-bottom: 0;
+                }
+
+                .proposito__parrafo {
+                    font-size: 0.88rem;
+                    padding-bottom: 1%;
+                }
+
+                button {
+
+                    .btn-outline-primary {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #Ir {
+    
+        .preguntas {
+            margin-top: 30%;
+            margin-bottom: 20%;
+        
+            .preguntas__titulo {
+                font-size: 1.8rem;
+                margin-bottom: 0;
+                padding-bottom: 3%;
+            }
+        
+            .preguntas__parrafo {
+                font-size: 1rem;
+                padding: 0% 3% 3% 3%;
+            }
+        
+            .mensaje__cta {
+                padding-top: 0;
+                text-align: center;
+            
+                .btn-primary {
+                    font-weight: $fontw-500;
+                    font-size: 1.0625rem;
+                    padding-left: 3%;
+                    padding-right: 3%;
+                    background-color: $colorcl;
+                    border-color: $colorcl;
+        
+                    &:hover {
+                        background-color: $colornj;
+                        border-color: $colornj;
+        
+                        a {
+                            color: $colorbc !important;
+                            text-decoration: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #Flecha {
+        position: fixed;
+        top: 930px;
+    }
+}
+
+/*------------------- Media Query Tablet - HTML Equipo -------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+
+    .cabecera {
+        height: 180px !important;
+    }
+
+    .separadores {
+
+        .breadcrumb {
+            padding-left: 10.5% !important;
+            padding-top: 2%;
+        }
+
+        .breadcrumb-item {
+            font-size: 0.9rem !important;
+        }
+    }
+    
+    #nuestroEquipo {
+    
+        .equipo__contenedor {
+            flex-wrap: wrap;
+    
+            .equipo__contenedor--izquierda {
+                width: 100%;
+            
+                .equipo__titulo {
+                    margin-left: 20%;
+                    margin-bottom: 3%;
+                    padding-top: 10%;
+                }
+            
+                .equipo__parrafo {
+                    font-size: 1rem;
+                    margin-left: 30%;
+                    display: block;
+                    padding-top: 0%;
+                    padding-bottom: 0%;
+                }
+            
+                .equipo__icono {
+                    margin-left: 20%;
+                }
+            }
+    
+            .equipo__contenedor--derecha {
+                margin-left: 18%;
+
+                .equipo__img {
+                    padding-top: 14%;
+                }
+            }
+        }  
+    }
+
+    #Propositos {
+
+        .nosotros__encabezado {
+            padding: 3% 5% 3% 5%;
+            line-height: 1.3;
+        }
+
+        .proposito__contenedor {
+            margin: 3% 0% 3% 0%;
+            flex-wrap: wrap;
+
+            .proposito__tarjeta {
+                width: 44%;
+                margin: 8% 3% 8% 3%;
+
+                .proposito__titulo {
+                    font-size: 1.16rem;
+                }
+
+                .proposito__parrafo {
+                    font-size: 0.88rem;
+                }
+
+                button {
+
+                    .btn-outline-primary {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #Flecha {
+        position: fixed;
+        top: 930px;
+    }
+}
+
+/*------------------- Media Query Mobile - HTML Misión -------------------*/
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+
+    .cabecera {
+        height: 180px !important;
+    }
+
+    .Pilares {
+
+        .nosotros__encabezado {
+            font-size: 1.3rem;
+            padding: 0% 4% 3% 4%;
+            line-height: 1.3;
+        }
+
+        .tresContenedor {
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            .tres {
+                width: 80%;
+                height: 480px;
+                margin: 0 auto;
+                margin-top: 5%;
+                margin-bottom: 10%;
+
+                .tres__titulo {
+                    font-size: 1.4rem !important;
+                }
+
+                .tres__parrafo {
+                    font-size: 0.9rem;
+                    padding: 35% 10% 10% 10%;
+                }
+            }
+        }
+    }
+
+    #Filosofia {
+
+        .tituloFondo {
+            font-size: 1.9rem;
+            letter-spacing: 1px;
+            padding-top: 8%;
+            padding-bottom: 8%;
+            margin-bottom: 15%;
+        }
+
+        .filosofia__contenedor {
+            margin: 0% 18% 0% 18%;
+
+            .filosofia__burbuja {
+                margin-bottom: 20%;
+
+                .filosofia__parrafo {
+                    font-size: 0.9rem !important;
+                }
+            }
+        }
+    }
+}
+
+/*------------------- Media Query Tablet - HTML Misión --------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+
+    .cabecera {
+        height: 180px !important;
+    }
+
+    .Pilares {
+
+        .nosotros__encabezado {
+            padding: 3% 5% 3% 5%;
+            line-height: 1.3;
+        }
+
+        .tresContenedor {
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            .tres {
+                width: 56%;
+                height: 480px;
+                margin: 0 auto;
+                margin-top: 5%;
+                margin-bottom: 10%;
+
+                .tres__titulo {
+                    font-size: 1.4rem !important;
+                }
+
+                .tres__parrafo {
+                    font-size: 1rem;
+                    padding: 28% 10% 10% 10%;
+                }
+            }
+        }
+    }
+
+    #Filosofia {
+
+        .filosofia__contenedor {
+            margin: 11% 12% 7% 12%;
+
+            .filosofia__parrafo {
+                font-size: 0.9rem !important;
+            }
+        }
+    }
+}
+
+/*------------------- Media Query Mobile - HTML Visión -------------------*/
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+    
+    .cabecera {
+        height: 180px !important;
+    }
+
+    #Vamos {
+
+        .tituloFondo {
+            font-size: 1.9rem;
+            letter-spacing: 1.4px;
+            padding-top: 8%;
+            padding-bottom: 8%;
+            margin-bottom: 5%;
+        }
+
+        .vamos__vision {
+            margin-top: 0;
+
+            .mb-3 {
+                margin: 5% !important;
+
+                .card-header {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+/*------------------- Media Query Tablet - HTML Visión --------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+
+    .cabecera {
+        height: 180px !important;
+    }
+
+    #Vamos {
+
+        .vamos__vision {
+            margin-top: 7.2%;
+
+            .mb-3 {
+                margin: 3% !important;
+
+                .card-header {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
